@@ -1,0 +1,83 @@
+/* chat.css */
+*{-webkit-text-size-adjust: none;}
+body{color: #333; font-size: 12px; font-family: 'Noto Sans', sans-serif;}
+a{color: #333; text-decoration: none;}
+img{width: 40px; height: 40px; border-radius: 40px; margin-right: 10px; margin-left: 15px;}
+main {
+   animation: ani .5s ease-in-out;
+ }
+ 
+ @keyframes ani {
+   from {
+     opacity: 0;
+     transform: translateY(10px);
+   }
+   to {
+     opacity: 1;
+     transform: none;
+   }
+ }
+
+/* layout */
+body>header{width: 100%; }
+body>.main_c{width: 100%;}
+body>nav{width: 100%;}
+
+/* header */
+header.top_c{color: #333; background-color: #A1C0D5; }
+
+.header_top_chat{display: flex; justify-content: space-between; padding: 2px 10px 0;}
+.header_top_chat div:nth-child(2){margin-left: 50px;}
+.header_top_chat div i{padding-right: 3px;}
+
+
+.header_bottom{display: flex; justify-content: space-between; align-items: center; padding: 7px 15px; border-bottom: 1px solid #92B1C6;}
+.header_bottom .header_txt{font-size: 16px;}
+.header_bottom div:nth-of-type(1) i{ font-size: 30px;}
+.header_bottom div:nth-of-type(2) span{margin-left: 20px;}
+.header_bottom div:nth-of-type(3) i{font-size: 14px; margin-right: 3px;}
+
+/* main */
+.main_c{position: relative; display: flex; flex-direction: column; background-color: #A1C0D5; width: 100%; height: 812px; }
+
+/* date */
+.main_c div.date{display: flex; justify-content: center;}
+.main_c .date{padding-top: 5px; color:rgba(0, 0, 0, 0.5)}
+
+/* talk_y */
+.main_c .talk_y{display: flex; flex-direction: column; align-items: flex-end;}
+
+.main_c .talk_y span:not(.time){background-color: #FFE838; padding:5px; border-radius: 5px; margin: 5px 10px 5px 0; font-size: 16px;}
+.main_c .talk_y span:nth-child(2){width: 220px;}
+
+.main_c .timer{position: fixed; left: 225px; top: 230px;}
+.main_c .timer .time{font-size: 10px; color: rgba(0, 0, 0, 0.5);}
+
+/* talk_w */
+.main_c .talk_l{position: relative; margin-top: 20px;}
+.main_c .talk_l img{position: fixed; display: block; width: 33px; height: 33px; margin-left: 5px;}
+
+.main_c .talk_w{display: flex; flex-direction: column;  align-items: flex-start;}
+
+
+.main_c .talk_w .text{display: flex; flex-direction: column;}
+.main_c .talk_w span{margin-left: 50px; margin-bottom: 10px;}
+.main_c .talk_w span.answer{background-color: #fff; font-size: 16px; padding: 5px; border-radius: 5px;}
+
+.main_c .talk_w .f_name{display: block; font-weight: bold;}
+
+.main_c .timer_l{position: fixed; right:100px; top: 395px;}
+.main_c .timer_l .time_l{font-size: 10px; color: rgba(0, 0, 0, 0.5);}
+
+/* footer */
+footer{position: fixed; display: flex; justify-content: space-between; align-items: center; left: 0; bottom: 0; background-color: #eee; width: 100%; padding: 3px 0;}
+
+footer input{flex: 3; width: 290px; height: 35px;}
+
+footer div:first-of-type{flex:1; margin-left: 10px;}
+footer div:first-of-type i{font-size: 18px; color: #999;}
+
+footer div:nth-child(2) i{position: fixed; right: 45px; bottom:15px; font-size: 18px; color: #ccc;}
+
+footer a{background-color: #FFE838; padding: 9px 10px; margin-right: 5px;}
+footer a i{font-size: 20px; color: #513736;}

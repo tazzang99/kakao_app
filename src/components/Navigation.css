@@ -1,0 +1,15 @@
+/* nav */
+.tab-bar{position: fixed; width: 100%; left: 0; bottom: 0;}
+
+.tab-inner{display: flex; justify-content: space-around; background-color: rgb(245, 245, 245); padding-top: 10px; border-top: 1px solid #ccc;}
+
+.tab-bar i{font-size: 24px;}
+
+.tab-bar a{display: flex; flex-direction: column; justify-content: flex-end; align-items: center; font-size: 10px; color: #ccc;}
+
+.tab-bar a i{transition: all 0.3s linear 0s;}
+.tab-bar a:hover i{transform: scale(1.1);}
+
+.tab-bar span{padding-top: 5px; padding-bottom: 3px;}
+
+.tab-bar a:active, .tab-bar a:focus{color: #513736;}
