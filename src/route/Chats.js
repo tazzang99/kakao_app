@@ -66,7 +66,7 @@ class Chats extends React.Component {
           id={user.id}
           username={user.username}
           name={user.name}
-          img = {ImgJSON[idx].img}
+          img = {ImgJSON[idx+1].img}
           />))}
         </div>
    </section>

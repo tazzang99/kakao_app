@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import './Profile.css';
+import ImgJSON from '../ImgJSON';
 
 export default class Profile extends Component {
    render() {
@@ -33,7 +34,7 @@ export default class Profile extends Component {
       </div>
    </header>
    <main className="main_p">
-      <img src="images/empty.jpg" alt="" className="img_p"/>
+      <img src={ImgJSON[0].img} alt="" className="img_p"/>
       <header className="main_p_header">
          <h6>My Name</h6>
       </header>

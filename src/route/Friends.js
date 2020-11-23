@@ -1,12 +1,26 @@
-import React from 'react';
+import React, {useState, useEffect} from 'react';
 import './Friends.css';
 import {Link} from 'react-router-dom';
+import ImgJSON from '../ImgJSON';
+import axios from 'axios';
+import User from '../components/User';
 
-import imgA from '../images/empty.jpg';
 
 function Friends() {
+
+   const [users, setUsers] = useState([]);
+
+   let getUser = async () => {
+      const users = await axios.get('https://jsonplaceholder.typicode.com/users');
+      setUsers(users.data);
+   }
+   useEffect(async () => {
+      await getUser();
+   },[])
+
+   if(users[0]){
    return (
-      <div classNameName="main">
+      <div className="main">
          <header className="top">
    <div className="header_top">
       <div className="header_column">
@@ -45,13 +59,9 @@ function Friends() {
       </header>
       <div>
          <Link to="/Profile">
-         <img src={imgA} alt="user" />
-         <a href="profile.html">My Name</a>
+         <img src={ImgJSON[0].img} alt={users[0].username} />
+         <span>{users[0].username}</span>
          </Link>
-      </div>
-      <div>
-         <img src={imgA} alt="user" />
-         <a href="#">Friends' Names Display</a>
       </div>
    </section>
    <section className="friends_list">
@@ -59,29 +69,21 @@ function Friends() {
          <h6>Friends</h6>
       </header>
       <div>
-         <img src={imgA} alt="user" />
-         <a href="#">Friend Name</a>
-         <div><span className="talk">Have a good day. See you soon.</span></div>
-      </div>
-      <div>
-         <img src={imgA} alt="user" />
-         <a href="#">Friend Name</a>
-         <div><span className="talk">Have a good day. See you soon.</span></div>
-      </div>
-      <div>
-         <img src={imgA} alt="user" />
-         <a href="#">Friend Name</a>
-         <div><span className="talk">Have a good day. See you soon.</span></div>
-      </div>
-      <div>
-         <img src={imgA} alt="user" />
-         <a href="#">Friend Name</a>
-         <div><span className="talk">Have a good day. See you soon.</span></div>
+      {users.map((user, idx) => {
+         if(idx!== 0){
+         return(<User
+          id={user.id}
+          username={user.username}
+          img = {ImgJSON[idx].img}
+          name={user.name}
+          />)}})}
       </div>
    </section>
 </main>
    </div>
+
    )
+         } else return null
 }
 
-export default Friends
+export default Friends;

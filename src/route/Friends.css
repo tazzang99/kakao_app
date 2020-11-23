@@ -76,11 +76,16 @@ input::placeholder{text-align: center;}
 
 /* header */
 .myProfile{margin-top: 15px;}
-.myProfile div{padding-bottom: 15px;}
+.myProfile img{width: 50px; height: 50px;}
+.myProfile div{padding-bottom: 10px; padding-top: 5px;}
+.myProfile div a{font-weight: bold;}
 
 /* friends_list */
-.friends_list{display: flex; flex-direction: column;}
-.friends_list div{display: flex; justify-content: space-between; align-items: center; margin-bottom: 3px;}
-.friends_list div a{flex: 4;}
-.friends_list div div span{display:inline-block; padding: 7px; background-color: #eee; border-radius: 5px; font-size: 10px; margin: 15px;}
+.friends_list a{display: flex; margin-bottom: 3px;}
+.friends_list img{width: 50px; height: 50px;}
+.friends_list div{display: flex; flex-direction: column; padding: 1px 0;}
+.friends_list .time_u{display: none;}
 
+.friends_list .userData{display: flex; margin: 10px 0;}
+
+.friends_list .userData .talk_u{font-size: 10px; color: rgb(172, 172, 172);}

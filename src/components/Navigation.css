@@ -1,5 +1,5 @@
 /* nav */
-.tab-bar{position: fixed; width: 100%; left: 0; bottom: 0;}
+.tab-bar{position: fixed; z-index: 1; width: 100%; left: 0; bottom: 0;}
 
 .tab-inner{display: flex; justify-content: space-around; background-color: rgb(245, 245, 245); padding-top: 10px; border-top: 1px solid #ccc;}
 

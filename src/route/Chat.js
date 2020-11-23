@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import './Chat.css';
 import {Link} from 'react-router-dom';
+import ImgJSON from '../ImgJSON';
 
 export default class Chat extends Component {
    render() {
@@ -49,7 +50,7 @@ export default class Chat extends Component {
          </div>
       </div>
       <div class="talk_l">
-            <img src="images/empty.jpg" alt="" />
+            <img src={ImgJSON[1].img} alt="" />
          <div class="talk_w">
             <span class="f_name">Friend Name</span>
             <span class="answer">And this is an answer</span>

@@ -1,6 +1,9 @@
 import React from 'react';
-import {Link} from 'react-router-dom';
 import './More.css';
+import ImgJSON from '../ImgJSON';
+import imgA from '../images/kakaofriends.png';
+import imgB from '../images/kakaostory.png';
+import imgC from '../images/path.png';
 
 
 function More() {
@@ -30,7 +33,7 @@ function More() {
    </header>
    <main className="main_m">
       <section className="myName">
-         <img src="images/empty.jpg" alt="" />
+         <img src={ImgJSON[0].img} alt="" />
          <div className="name-txt">
             <span>My Name</span>
             <span>UserId@gmail.com</span>
@@ -102,15 +105,15 @@ function More() {
       </section>
       <section className="family">
          <div>
-            <img src="images/kakaostory.png" alt="" />
+            <img src={imgA} alt="" />
             <span>Kakao Story</span>
          </div>
          <div>
-            <img src="images/path.png" alt="" />
+            <img src={imgC} alt="" />
             <span>Path</span>
          </div>
          <div>
-            <img src="images/kakaofriends.png" alt="" />
+            <img src={imgB} alt="" />
             <span>Kakao friends</span>
          </div>
       </section>
