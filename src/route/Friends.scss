@@ -1,0 +1,237 @@
+/* main.css */
+/* reset */
+html,body{
+    width: 100%; 
+    height: 100%;
+}
+body,div,dl,dt,dd,ul,li,ol,h1,h2,h3,h4,h5,h6,pre,form,fieldset,legend,label,table,caption,tbody,tfoot,thead,th,tr,td,summary,input,textarea,p,blockquote,abbr,address,cite,code,del,dfn,em,img,ins,kbd,q,samp,strong,sub,sup,var,th,td,table,small,b,i,article,aside,canvas,details,figcaption,figure,footer,header,menu,nav,section,time,mark,audio,video{
+    margin:0;
+    padding:0;
+}
+article,aside,details,figure,figcaption,footer,header,menu,nav,section,video{
+    display: block;
+}
+table{
+    border-collapse: collapse;
+}
+img,fieldset{
+    border:none;
+}
+address,caption,cite,code,em,strong,th{
+    font-size: normal; 
+    font-weight: normal;
+}
+ol,ul{
+    list-style: none;
+}
+caption,th{
+    text-align: left;
+}
+h1,h2,h3,h4,h5,h6{
+    font-weight: normal; 
+    font-size: 100%;
+}
+q:after,q:before{
+    content:"";
+}
+abbr,acronym{
+    border:none;
+}
+
+img,input{
+    vertical-align: middle;
+}
+hr{
+    display:none;
+}
+
+#skipNavi,.blind{
+    position: absolute; 
+    left: 0; 
+    top: 0; 
+    width: 0; 
+    height: 0; 
+    font-size: 0; 
+    list-style: 0; 
+    text-indent: -9999px; 
+    overflow: hidden; 
+    visibility: hidden;
+}
+
+li img,dd img{
+    vertical-align: top;
+}
+img{
+    max-width: 100%;
+}
+
+// common
+*{
+    -webkit-text-size-adjust: none;
+}
+
+body{
+    color: #8e9399;
+    font-size: 12px;
+    font-family: 'Noto-sans', sans-serif;
+}
+
+a{
+    color: #333;
+    text-decoration: none;
+}
+
+img{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin-right: 10px;
+    margin-left: 15px;
+}
+
+// layout
+header{
+    width: 100%;
+    color: #fff;
+}
+
+main.main_friends{
+    width: 100%;
+    animation: ani .5s ease-in-out;
+    & a{
+        font-size: 14px;
+    }
+    & header{
+        border-top: 1px solid #eee;
+        border-bottom: 1px solid #eee;
+        padding: 8px 10px;
+        margin-bottom: 5px;
+        color: #b6b6b6;
+    }
+}
+
+@keyframes ani{
+    from{
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to{
+        opacity: 1;
+        transform: none;
+    }
+}
+
+nav{
+    width: 100%;
+}
+
+// header
+.header_top{
+    display: flex;
+    justify-content: space-between;
+    padding: 5px 10px 0;
+    & div:nth-child(2){
+        margin-left: 50px;
+    }
+    & div i{
+        padding-right: 3px;
+    }
+}
+
+.header_bottom_f{
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    padding: 10px 20px;
+    & .header_txt{
+        font-size: 16px;
+    }
+    & div:nth-of-type(1) span{
+        color: rgb(165, 146, 146);
+    }
+    & div:nth-of-type(2) span{
+        margin-right: 17px;
+    }
+    & div:nth-of-type(2) span.friends_num{
+        color: rgb(255,239,17);
+        padding-left: 5px;
+    }
+    & div:nth-of-type(3) i{
+        font-size: 18px;
+    }
+}
+
+// main
+// 검색
+.search-bar_f{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-top: 10px;
+    width: 95%;
+    margin: 0 auto;
+    & i{
+        font-size: 15px;
+        color: rgb(189,189,189);
+        position: absolute;
+        left: 28px;
+    }
+    & input{
+        width: 100%;
+        padding: 7px 0;
+        background-color: #eee;
+        border: none;
+        border-radius: 5px;
+    }
+    & input:focus{
+        outline: none;
+        box-shadow: 0 0 0 1px #ffe948;
+    }
+    input::placeholder{
+        text-align: center;
+    }
+}
+
+// my profile
+// header
+.myProfile{
+    margin-top: 15px;
+    & img{
+        width: 50px;
+        height: 50px;
+    }
+    & div{
+        padding-bottom: 10px;
+        padding-top: 5px;
+    }
+    & div a{
+        font-weight: bold;
+    }
+}
+
+// friends_list
+.friends_list a{
+    display: flex;
+    margin-bottom: 3px;
+    & img{
+        width: 50px;
+        height: 50px;
+    }
+    & div{
+        display: flex;
+        flex-direction: column;
+        padding: 1px 0;
+    }
+    & .time_u{
+        display: none;
+    }
+    & .userData{
+        display: flex;
+        margin: 10px 0;
+    }
+    & .userData .talk_u{
+        font-size: 10px;
+        color: #ccc;
+    }
+}
